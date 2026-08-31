@@ -1,8 +1,8 @@
 class Tlw < Formula
   desc "Local workbench for training, running & evaluating agents backed by tiny LLMs"
   homepage "https://github.com/mtfuller/tiny-llm-workbench"
-  url "https://github.com/mtfuller/tiny-llm-workbench/releases/download/v0.1.0/tlw_v0.1.0_darwin_arm64.tar.gz"
-  sha256 "997904f8b55a973bb804d473222f967825df4ed33af2946a5552ad40bbf602e6"
+  url "https://github.com/mtfuller/tiny-llm-workbench/releases/download/v0.3.0/tlw_v0.3.0_darwin_arm64.tar.gz"
+  sha256 "e70e577249f92a158bbd8ffb655b327fabb4704796be32af10650a7c0ab394e9"
   license "MIT"
 
   livecheck do
