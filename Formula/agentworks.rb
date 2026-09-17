@@ -1,20 +1,27 @@
 class Agentworks < Formula
   desc "Vendor-agnostic tool for building and exporting AI agent artifacts (agents, skills, tools, hooks, workflows)"
   homepage "https://github.com/mtfuller/agentworks"
-  url "https://github.com/mtfuller/agentworks/archive/refs/tags/v0.0.2.tar.gz"
-  sha256 "cd8a801a42bf063710b814e0fb8d30201cda5e680220275c4fc96a38ccdc8b1a"
+  version "0.0.2"
   license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/mtfuller/agentworks/releases/download/v0.0.2/agentworks_v0.0.2_darwin_arm64.tar.gz"
+      sha256 "7ec123d34aaa0ac78aba7792ce6cba0ea9a912ff6bdc4a9e2b86265a9329f34a"
+    end
+    on_intel do
+      url "https://github.com/mtfuller/agentworks/releases/download/v0.0.2/agentworks_v0.0.2_darwin_amd64.tar.gz"
+      sha256 "99b3652dbecc1c287e4c0ca21c2a8eb210cbbebe9ba7b7a5bc96169ed6cfce3b"
+    end
+  end
 
   livecheck do
     url :stable
     strategy :github_latest
   end
 
-  depends_on "go" => :build
-
   def install
-    ldflags = "-s -w -X github.com/mtfuller/agentworks/internal/version.Version=v#{version}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "./main.go"
+    bin.install "agentworks"
   end
 
   test do
