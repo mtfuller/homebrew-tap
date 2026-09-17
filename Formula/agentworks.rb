@@ -1,17 +1,17 @@
 class Agentworks < Formula
   desc "Vendor-agnostic tool for building and exporting AI agent artifacts (agents, skills, tools, hooks, workflows)"
   homepage "https://github.com/mtfuller/agentworks"
-  version "0.0.3"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/mtfuller/agentworks/releases/download/v0.0.3/agentworks_v0.0.3_darwin_arm64.tar.gz"
-      sha256 "81946f87b30fd4ba06f2f26513ef0ebddb3e5352b3e3c606ab2722317c6f28df"
+      url "https://github.com/mtfuller/agentworks/releases/download/v0.1.0/agentworks_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "1457b88e2ed765eca7750a9dc666c1230fa1121b1990a6045fc265edcdaa218e"
     end
     on_intel do
-      url "https://github.com/mtfuller/agentworks/releases/download/v0.0.3/agentworks_v0.0.3_darwin_amd64.tar.gz"
-      sha256 "30d9a276d6e64cefcb329bb42ee405a604f82712fc9b95e6056cabc12d1cda84"
+      url "https://github.com/mtfuller/agentworks/releases/download/v0.1.0/agentworks_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "9d16034046ce74a4ca0c61ccaa347b2ad80da7aa8d1f9a00e4a43b810a12ff02"
     end
   end
 
